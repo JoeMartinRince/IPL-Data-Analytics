@@ -57,6 +57,14 @@ The dashboard analyzes cumulative match outcomes across all tournament seasons t
 - **Visualization:** Rendered as a Seaborn bar chart (`sns.barplot`), clearly illustrating the historical dominance of perennial powerhouses like Mumbai Indians, Chennai Super Kings, and Kolkata Knight Riders.
 - **Readability:** Team names are rotated along the x-axis to prevent label overlap and ensure crisp rendering across varying screen resolutions.
 
+### Top Run Scorers Analysis
+
+Player scoring achievements are analyzed across tens of thousands of delivery events:
+- **Data Source:** Ingested from `deliveries.csv` utilizing `batter` and `batsman_runs` columns.
+- **Computation:** Grouped by batter using `deliveries.groupby('batter')['batsman_runs'].sum()`, sorted in descending order, and filtered using `.head(10)`.
+- **Insights:** Highlights premier batting stalwarts across IPL history (e.g., Virat Kohli, Suresh Raina, Rohit Sharma, David Warner, and Shikhar Dhawan).
+- **Visualization:** Displayed through a dedicated Seaborn bar chart with 45-degree tick label rotation and labeled run totals.
+
 ## Tech Stack
 - Python
 - Pandas
