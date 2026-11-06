@@ -428,3 +428,14 @@ Planned future enhancements to expand capabilities:
 | `Port 8501 is already in use` | Another local Streamlit application instance is already executing on port 8501. | Launch on a different port using `streamlit run app.py --server.port 8502`. |
 | PowerShell Execution Policy error on `Activate.ps1` | Windows PowerShell restricts running third-party activation scripts by default. | Execute `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` in PowerShell. |
 | High RAM consumption on startup | Loading 190,000+ ball rows simultaneously. | Ensure machine has at least 2 GB free memory; close background processes if running in low-resource environments. |
+
+## Acknowledgements & References
+
+- **Dataset Publication:** Sincere thanks to [Patrick B](https://www.kaggle.com/patrickb1912) on Kaggle for curating and hosting the [IPL Complete Dataset (2008-2020)](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020).
+- **Match Records:** Originating scorecards and ball-by-ball telemetry courtesy of Cricsheet and official BCCI match records.
+- **Open-Source Software:** Gratefully acknowledging the open-source engineering teams behind Python, Pandas, Streamlit, Matplotlib, Seaborn, and NumPy.
+- **Reference Documentation:**
+  - [Streamlit Documentation](https://docs.streamlit.io/)
+  - [Pandas API Reference](https://pandas.pydata.org/docs/)
+  - [Seaborn Visualization Guide](https://seaborn.pydata.org/)
+  - [Matplotlib User Guide](https://matplotlib.org/stable/users/index.html)
