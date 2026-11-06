@@ -367,6 +367,19 @@ Upon successful startup, Streamlit provides local and network network URLs in yo
   streamlit run app.py --server.headless true
   ```
 
+## User Guide & Dashboard Navigation
+
+When the dashboard opens in your browser (`http://localhost:8501`), users encounter a structured analytical interface:
+
+1. **Header & Context:** Introduces the scope of the exploratory dashboard.
+2. **Interactive Sidebar:** Located on the left pane, allowing instant filtering by IPL franchise.
+3. **Filtered Matches Record:** Displays tabular data containing the season, winner, and venue for the selected team's matches.
+4. **All-Time Franchise Wins Chart:** Visualizes cumulative win totals across all IPL franchises in descending order.
+5. **Top Run Scorers Leaderboard:** Visualizes the top 10 batsmen with highest aggregate runs scored.
+6. **Toss Outcome Metric Banner:** Features the empirical percentage of toss winners winning matches.
+7. **Matches Per Season Timeline:** Depicts the volume trajectory of matches over time.
+8. **Top Six Hitters Leaderboard:** Highlights the top 10 boundary clearers in tournament history.
+
 ## Troubleshooting & FAQs
 
 | Issue / Error | Potential Cause | Verified Resolution |
