@@ -226,6 +226,16 @@ Seaborn (`seaborn as sns`) delivers polished, publication-ready aesthetics atop 
 - **Time-Series Progression (`sns.lineplot`):** Deployed for matches per season (`x=matches_per_season.index, y=matches_per_season.values, marker='o'`), highlighting year-over-year tournament schedule shifts.
 - **Axes Targeting:** Passing `ax=ax` explicitly binds Seaborn's high-level statistical plotting routines into the active Matplotlib Axes instance.
 
+## Streamlit Dashboard Architecture
+
+The dashboard is built on Streamlit's declarative, reactive application framework:
+
+- **Reactive Execution Cycle:** Every widget event (such as selecting a new team in the sidebar) triggers an immediate top-to-bottom re-execution of `app.py`, dynamically refreshing filtered match tables and views while preserving fast runtime speed.
+- **Layout Partitioning:** 
+  - **Sidebar Region (`st.sidebar`):** Dedicated control area hosting the interactive franchise selector (`st.sidebar.selectbox`).
+  - **Main Content Region:** Sequentially lays out introductory commentary, tabular drilldowns, statistical banners (`st.success`), and Matplotlib figure canvases (`st.pyplot`).
+- **Zero Frontend Overhead:** Does not require HTML templates, CSS builds, or JavaScript client-server synchronization, enabling pure Python full-stack sports analytics.
+
 ## Tech Stack
 - Python
 - Pandas
