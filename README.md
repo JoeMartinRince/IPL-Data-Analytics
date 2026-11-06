@@ -380,6 +380,14 @@ When the dashboard opens in your browser (`http://localhost:8501`), users encoun
 7. **Matches Per Season Timeline:** Depicts the volume trajectory of matches over time.
 8. **Top Six Hitters Leaderboard:** Highlights the top 10 boundary clearers in tournament history.
 
+### Step-by-Step Instructions for Using Team Filters
+
+1. **Access the Sidebar:** Click the sidebar area titled **"Filter"** on the left side of the screen (or tap the `>` arrow icon if collapsed on smaller screens).
+2. **Select a Franchise:** Click the **"Select Team"** dropdown menu to reveal the full list of historical IPL franchises.
+3. **Trigger Reactive Filtering:** Select any team (e.g., *Mumbai Indians*, *Chennai Super Kings*, or *Kolkata Knight Riders*). Streamlit will instantly re-filter the DataFrame.
+4. **Review Match Outing Details:** Examine the rendered table under **"Matches Won by [Team]"**, which details the season, winner confirmation, and host venue for the first 10 recorded victories.
+5. **Switch Between Teams:** Choose any other franchise at any time to immediately update the drilldown table without a full browser refresh.
+
 ## Troubleshooting & FAQs
 
 | Issue / Error | Potential Cause | Verified Resolution |
