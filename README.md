@@ -103,6 +103,13 @@ The analytical pipeline is powered by two complementary tabular datasets stored 
 - **Licensing & Usage:** Freely accessible under open data licensing for educational and non-commercial sports data analytics research.
 - **File Pairing:** Designed to be loaded side-by-side in the repository root directory as `matches.csv` and `deliveries.csv`.
 
+### Historical Coverage & Scope
+
+- **Temporal Range:** Covers 13 consecutive seasons from the inaugural tournament in 2008 through the 2020 tournament edition.
+- **Match Universe:** Comprises over 800 sanctioned T20 matches played across Indian stadiums and neutral overseas venues (including South Africa in 2009 and the UAE in 2014 & 2020).
+- **Delivery Universe:** Exceeds 193,000 recorded delivery events, capturing runs scored, extras, and individual player actions.
+- **Franchise Evolution:** Encompasses both foundation franchises (e.g., MI, CSK, KKR, RCB, RR, KXIP, DC) and historical transient franchises (e.g., Deccan Chargers, Pune Warriors, Gujarat Lions, Rising Pune Supergiant, Kochi Tuskers Kerala, and Sunrisers Hyderabad).
+
 ## Tech Stack
 - Python
 - Pandas
