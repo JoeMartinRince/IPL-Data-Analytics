@@ -137,6 +137,15 @@ Raw sports tracking datasets often feature missing values, abandoned matches (no
 - **Exclusion of Non-Result Matches:** Aggregations with `.value_counts()` automatically ignore missing values, ensuring win statistics are accurately representative of completed matches.
 - **Exact Boundary Filtering:** Power-hitting analytics rigorously filter deliveries where `deliveries['batsman_runs'] == 6`, guaranteeing that extra runs (e.g., overthrows or leg-byes) do not inflate individual boundary statistics.
 
+### Pandas Analytical Computation Workflow
+
+The dashboard leverages core Pandas primitives to perform complex transformations with high computational efficiency:
+
+1. **Vectorized Boolean Masking:** Used in filtering matches by selected team (`matches[matches['winner'] == selected_team]`), toss correlation (`matches['toss_winner'] == matches['winner']`), and boundary filtering (`deliveries['batsman_runs'] == 6`).
+2. **Frequency Distribution Computation:** `value_counts()` executes fast, single-pass hash-based counting for categorical franchise victories.
+3. **Split-Apply-Combine Aggregation:** `deliveries.groupby('batter')['batsman_runs'].sum()` groups ball records by batsman name, aggregates numeric run tallies, and sorts outputs via `.sort_values(ascending=False)`.
+4. **Index Sorting for Time Series:** `.sort_index()` maintains sequential order when counting occurrences across chronological tournament years.
+
 ## Tech Stack
 - Python
 - Pandas
