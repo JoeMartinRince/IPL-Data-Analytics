@@ -200,6 +200,15 @@ matches_per_season = matches['season'].value_counts().sort_index()
 - **Index Reordering:** `.sort_index()` sorts entries in chronological sequence by year rather than descending match counts.
 - **Coordinates:** `matches_per_season.index` maps to season years (x-axis) and `matches_per_season.values` maps to match totals (y-axis), feeding directly into the time-series line chart.
 
+## Data Visualization Architecture
+
+The dashboard visualizes complex statistical aggregates into accessible, presentation-ready charts through integration with Streamlit:
+
+- **Component Encapsulation:** Every visual artifact is instantiated as a distinct Matplotlib Figure (`fig, ax = plt.subplots(...)`) to avoid state pollution between visualizations.
+- **Direct Web Mounting:** Visualizations are injected into Streamlit's web DOM using `st.pyplot(fig)`.
+- **Responsive Dimensions:** Proportions (`figsize=(10,5)` and `figsize=(12,6)`) are calibrated to ensure clarity on diverse display screens.
+- **Layout Optimization:** Calls to `plt.tight_layout()` ensure axis titles and rotated tick marks are never clipped by viewport margins.
+
 ## Tech Stack
 - Python
 - Pandas
