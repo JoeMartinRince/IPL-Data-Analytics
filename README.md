@@ -305,6 +305,24 @@ Activate the environment based on your operating system:
   source venv/bin/activate
   ```
 
+### Dependency Installation
+
+Install all required third-party libraries using the project's pinned manifest:
+
+```bash
+# Upgrade pip to latest version
+python -m pip install --upgrade pip
+
+# Install project dependencies
+pip install -r requirements.txt
+```
+
+Verify that all dependencies were installed properly:
+
+```bash
+python -c "import streamlit, pandas, matplotlib, seaborn, numpy; print('All dependencies imported successfully!')"
+```
+
 ## Run Locally
 
 ```bash
