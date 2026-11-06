@@ -388,6 +388,16 @@ When the dashboard opens in your browser (`http://localhost:8501`), users encoun
 4. **Review Match Outing Details:** Examine the rendered table under **"Matches Won by [Team]"**, which details the season, winner confirmation, and host venue for the first 10 recorded victories.
 5. **Switch Between Teams:** Choose any other franchise at any time to immediately update the drilldown table without a full browser refresh.
 
+## Key Analytical Insights from IPL Data
+
+Exploration of the 2008–2020 dataset yields several findings that challenge common intuitions:
+
+- **Sustained Franchise Dominance:** Mumbai Indians and Chennai Super Kings lead in cumulative match victories by a substantial margin, highlighting consistent squad retention and tournament execution across cycles.
+- **The Coin Toss Balance:** The calculated toss-winner match victory rate sits at approximately ~52%. This empirical finding disproves the common belief that winning the coin toss gives an overwhelming unfair advantage in T20 cricket.
+- **Anchor Batting Longevity:** The all-time run leaders (such as Virat Kohli, Suresh Raina, Rohit Sharma, and Shikhar Dhawan) represent top-order batsmen who consistently play deep into innings across 10+ seasons.
+- **Power Hitter Impact:** The six-hitting leaderboard showcases dominant impact players (such as Chris Gayle and AB de Villiers) whose ability to clear boundaries transformed modern T20 run-scoring rates.
+- **Tournament Scale Adjustments:** Scheduling data illustrates the league's experimentation, ranging from 76 matches in 2012–2013 with 9–10 franchises to a stable 60-match fixture schedule.
+
 ## Troubleshooting & FAQs
 
 | Issue / Error | Potential Cause | Verified Resolution |
