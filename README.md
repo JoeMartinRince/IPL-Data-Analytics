@@ -323,6 +323,22 @@ Verify that all dependencies were installed properly:
 python -c "import streamlit, pandas, matplotlib, seaborn, numpy; print('All dependencies imported successfully!')"
 ```
 
+### Dataset Placement & Local Preparation
+
+The application relies on two CSV files loaded from the current working directory:
+
+1. Download the dataset files from Kaggle: [IPL Complete Dataset (2008-2020)](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020).
+2. Unpack and place `matches.csv` and `deliveries.csv` directly in the project root directory alongside `app.py`:
+   ```bash
+   # Confirm files are present in the project root
+   # Windows (PowerShell):
+   Test-Path matches.csv, deliveries.csv
+   
+   # macOS / Linux:
+   ls matches.csv deliveries.csv
+   ```
+3. Because both files are listed in `.gitignore`, Git will protect them from being committed into repository version control.
+
 ## Run Locally
 
 ```bash
