@@ -366,3 +366,13 @@ Upon successful startup, Streamlit provides local and network network URLs in yo
   ```bash
   streamlit run app.py --server.headless true
   ```
+
+## Troubleshooting & FAQs
+
+| Issue / Error | Potential Cause | Verified Resolution |
+| :--- | :--- | :--- |
+| `FileNotFoundError: matches.csv` or `deliveries.csv` | Dataset files are not located in the current working directory from where `streamlit run` was launched. | Download datasets from Kaggle and ensure `matches.csv` and `deliveries.csv` are in the same folder as `app.py`. |
+| `ModuleNotFoundError: No module named 'streamlit'` | Virtual environment is inactive or packages have not yet been installed. | Activate your virtual environment and run `pip install -r requirements.txt`. |
+| `Port 8501 is already in use` | Another local Streamlit application instance is already executing on port 8501. | Launch on a different port using `streamlit run app.py --server.port 8502`. |
+| PowerShell Execution Policy error on `Activate.ps1` | Windows PowerShell restricts running third-party activation scripts by default. | Execute `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser` in PowerShell. |
+| High RAM consumption on startup | Loading 190,000+ ball rows simultaneously. | Ensure machine has at least 2 GB free memory; close background processes if running in low-resource environments. |
