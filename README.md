@@ -341,6 +341,28 @@ The application relies on two CSV files loaded from the current working director
 
 ## Run Locally
 
+Launch the application using Streamlit's command-line interface:
+
 ```bash
 streamlit run app.py
 ```
+
+Upon successful startup, Streamlit provides local and network network URLs in your terminal:
+
+```text
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://192.168.x.x:8501
+```
+
+### Custom Startup Options
+
+- **Specify Custom Port:**
+  ```bash
+  streamlit run app.py --server.port 8080
+  ```
+- **Run in Headless Mode (e.g., remote server or Docker container):**
+  ```bash
+  streamlit run app.py --server.headless true
+  ```
