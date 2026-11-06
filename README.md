@@ -65,6 +65,15 @@ Player scoring achievements are analyzed across tens of thousands of delivery ev
 - **Insights:** Highlights premier batting stalwarts across IPL history (e.g., Virat Kohli, Suresh Raina, Rohit Sharma, David Warner, and Shikhar Dhawan).
 - **Visualization:** Displayed through a dedicated Seaborn bar chart with 45-degree tick label rotation and labeled run totals.
 
+### Toss Impact on Match Results
+
+A central debate in cricket strategy revolves around the importance of winning the coin toss:
+- **Theoretical Context:** Toss-winning captains frequently elect to field first or bat first according to ground dew factors, pitch deterioration, and target-chasing dynamics.
+- **Analytical Method:** Filters matches where the toss winner coincides with the match winner (`matches['toss_winner'] == matches['winner']`).
+- **Mathematical Formulation:** 
+  $$\text{Toss Win Conversion Rate (\%)} = \left(\frac{\text{Matches won by toss winner}}{\text{Total matches played}}\right) \times 100$$
+- **UI Presentation:** Rendered prominently as a styled Streamlit success banner (`st.success`), highlighting that toss winners converted to match winners approximately 52% of the time, debunking assumptions of overwhelming toss bias.
+
 ## Tech Stack
 - Python
 - Pandas
