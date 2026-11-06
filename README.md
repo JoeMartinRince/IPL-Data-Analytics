@@ -398,6 +398,16 @@ Exploration of the 2008–2020 dataset yields several findings that challenge co
 - **Power Hitter Impact:** The six-hitting leaderboard showcases dominant impact players (such as Chris Gayle and AB de Villiers) whose ability to clear boundaries transformed modern T20 run-scoring rates.
 - **Tournament Scale Adjustments:** Scheduling data illustrates the league's experimentation, ranging from 76 matches in 2012–2013 with 9–10 franchises to a stable 60-match fixture schedule.
 
+## Data Limitations & Project Scope
+
+Understanding the boundaries of the underlying data and analytical scope:
+
+- **Temporal Boundary:** Analysis encompasses historical matches through the 2020 edition. Subsequent seasons (2021 to present) and newer franchises (e.g., Gujarat Titans and Lucknow Super Giants) are not part of this release.
+- **Rain Interruptions & Adjusted Scores:** Duckworth-Lewis-Stern (DLS) method adjustments or rain-reduced over scenarios are credited to the official match winner without over-normalization.
+- **Super Over Outcomes:** Tie matches settled via Super Overs record the tie-break victor directly in the `winner` column.
+- **Bowling Dimensions:** The current version emphasizes team victories, batsman run totals, and boundary hitting; bowling metrics (wickets taken, bowling economy, bowling strike rates) are reserved for subsequent versions.
+- **Batch Dataset Processing:** Operations execute over local static CSV snapshots rather than real-time telemetry or live web APIs.
+
 ## Troubleshooting & FAQs
 
 | Issue / Error | Potential Cause | Verified Resolution |
