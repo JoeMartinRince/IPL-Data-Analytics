@@ -74,6 +74,13 @@ A central debate in cricket strategy revolves around the importance of winning t
   $$\text{Toss Win Conversion Rate (\%)} = \left(\frac{\text{Matches won by toss winner}}{\text{Total matches played}}\right) \times 100$$
 - **UI Presentation:** Rendered prominently as a styled Streamlit success banner (`st.success`), highlighting that toss winners converted to match winners approximately 52% of the time, debunking assumptions of overwhelming toss bias.
 
+### Season-Wise Match Trends
+
+The annual volume of IPL fixtures reflects tournament expansion, franchise inclusions, and scheduling format changes:
+- **Chronological Sorting:** Uses `matches['season'].value_counts().sort_index()` to track total matches conducted during each edition.
+- **Visual Encoding:** Plotted using a connected Seaborn line plot (`sns.lineplot`) with explicit point markers (`marker='o'`).
+- **Observations:** Clearly visualizes peak seasons (e.g., 2011–2013 with 70+ fixtures during franchise expansion) versus standard 8-team 60-match formats.
+
 ## Tech Stack
 - Python
 - Pandas
