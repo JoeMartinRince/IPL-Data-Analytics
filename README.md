@@ -270,6 +270,17 @@ IPL-Data-Analytics/
     └── deliveries.csv       # Ball-by-ball records (downloaded separately)
 ```
 
+## Installation & Setup Guide
+
+### System Prerequisites & Python Requirements
+
+Prior to running the dashboard locally, ensure your environment meets the following requirements:
+
+- **Python Version:** Python 3.8 or higher (tested on Python 3.8, 3.9, 3.10, and 3.11).
+- **Package Manager:** `pip` (Python package installer) up to date.
+- **Operating System:** Platform-independent (fully functional on Windows 10/11, macOS, and Linux distributions).
+- **Hardware Resources:** Minimum 2 GB RAM recommended to process and cache the 190,000+ delivery rows smoothly.
+
 ## Run Locally
 
 ```bash
