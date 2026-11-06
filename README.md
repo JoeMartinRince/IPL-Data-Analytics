@@ -89,16 +89,22 @@ The dashboard features an interactive sidebar designed for focused franchise inq
 - **Match Table Drilldown:** Renders the first 10 match victories with key attributes (`season`, `winner`, `venue`) directly in the main interface.
 - **Boundary Power-Hitters Complement:** Accompanied by a dedicated analysis of the top 10 six-hitting batsmen (`deliveries[deliveries['batsman_runs'] == 6]`), highlighting power hitters like Chris Gayle, AB de Villiers, and Rohit Sharma.
 
+## Dataset Architecture & Overview
+
+The analytical pipeline is powered by two complementary tabular datasets stored in CSV format, capturing both high-level match outcomes and atomic delivery events:
+
+1. **`matches.csv` (Match-Level Records):** Encapsulates macro match-level metadata across every fixture, including season edition, participating teams, toss decisions, venue locations, and match winners.
+2. **`deliveries.csv` (Ball-by-Ball Records):** Provides granular micro-level event logging for each delivery bowled in the tournament, recording bowler actions, batsman runs scored, extra runs, and wicket dismissals.
+
+Dataset used:
+https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020
+
 ## Tech Stack
 - Python
 - Pandas
 - Streamlit
 - Matplotlib
 - Seaborn
-
-## Dataset
-Dataset used:
-https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020
 
 ## Run Locally
 
