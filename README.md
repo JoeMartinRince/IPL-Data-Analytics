@@ -249,6 +249,27 @@ The application leverages Python's scientific and analytical ecosystem:
 | **Seaborn** | Statistical Data Visualization | High-level aesthetic charts including categorical bar plots (`sns.barplot`) and chronological line plots (`sns.lineplot`). |
 | **NumPy** | Numerical Computing | Vectorized array operations and numerical support underlying Pandas Series calculations. |
 
+## Project Directory Structure
+
+The repository maintains a clean, minimal file layout:
+
+```text
+IPL-Data-Analytics/
+├── .gitignore               # Excludes raw CSV datasets and Python bytecode
+├── README.md                # Comprehensive project documentation and guides
+├── requirements.txt         # Runtime Python package dependencies
+├── app.py                   # Main Streamlit application and analytics pipeline
+├── Screenshots/             # Application preview captures and charts
+│   ├── Screenshot 2026-05-17 195209.png
+│   ├── Screenshot 2026-05-17 195233.png
+│   ├── Screenshot 2026-05-17 195311.png
+│   ├── Screenshot 2026-05-17 195340.png
+│   └── Screenshot 2026-05-17 195357.png
+└── [Data Files - External / Downloaded]
+    ├── matches.csv          # Match metadata (downloaded separately)
+    └── deliveries.csv       # Ball-by-ball records (downloaded separately)
+```
+
 ## Run Locally
 
 ```bash
