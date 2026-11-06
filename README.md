@@ -281,6 +281,30 @@ Prior to running the dashboard locally, ensure your environment meets the follow
 - **Operating System:** Platform-independent (fully functional on Windows 10/11, macOS, and Linux distributions).
 - **Hardware Resources:** Minimum 2 GB RAM recommended to process and cache the 190,000+ delivery rows smoothly.
 
+### Virtual Environment Setup
+
+Isolating dependencies within a dedicated virtual environment prevents version collisions:
+
+```bash
+# 1. Create a virtual environment named 'venv'
+python -m venv venv
+```
+
+Activate the environment based on your operating system:
+
+- **Windows (PowerShell):**
+  ```powershell
+  .\venv\Scripts\Activate.ps1
+  ```
+- **Windows (Command Prompt):**
+  ```cmd
+  .\venv\Scripts\activate.bat
+  ```
+- **macOS / Linux (Bash / Zsh):**
+  ```bash
+  source venv/bin/activate
+  ```
+
 ## Run Locally
 
 ```bash
