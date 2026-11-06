@@ -218,6 +218,14 @@ Matplotlib (`matplotlib.pyplot`) serves as the foundational rendering backend ac
 - **Rotated Tick Labels:** `plt.xticks(rotation=45, ha='right')` aligns long franchise and player names at a 45-degree slant to maintain clean spacing.
 - **Padding Control:** `plt.tight_layout()` automatically adjusts spacing around subplot perimeters.
 
+### Seaborn Statistical Theming & Plot Types
+
+Seaborn (`seaborn as sns`) delivers polished, publication-ready aesthetics atop Matplotlib:
+
+- **Categorical Bar Plots (`sns.barplot`):** Applied to visualize franchise wins (`x=team_wins.index, y=team_wins.values`), top run scorers (`x=top_batsmen.index, y=top_batsmen.values`), and boundary leaders (`x=top_six_hitters.index, y=top_six_hitters.values`).
+- **Time-Series Progression (`sns.lineplot`):** Deployed for matches per season (`x=matches_per_season.index, y=matches_per_season.values, marker='o'`), highlighting year-over-year tournament schedule shifts.
+- **Axes Targeting:** Passing `ax=ax` explicitly binds Seaborn's high-level statistical plotting routines into the active Matplotlib Axes instance.
+
 ## Tech Stack
 - Python
 - Pandas
