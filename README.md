@@ -131,6 +131,12 @@ Raw sports tracking datasets often feature missing values, abandoned matches (no
 - **Targeted Subsetting:** Specific features required for analytical views are isolated dynamically rather than duplicated in memory.
 - **Dataset Partitioning:** Queries on team results and season trends reference `matches`, while player-level performance metrics reference `deliveries`.
 
+### Data Cleaning & Handling Missing Values
+
+- **Handling Null Match Winners:** Weather disruptions or abandoned games leave `winner` blank (`NaN`). In `app.py`, calling `matches['winner'].dropna().unique()` prevents null values from entering the team selection widget.
+- **Exclusion of Non-Result Matches:** Aggregations with `.value_counts()` automatically ignore missing values, ensuring win statistics are accurately representative of completed matches.
+- **Exact Boundary Filtering:** Power-hitting analytics rigorously filter deliveries where `deliveries['batsman_runs'] == 6`, guaranteeing that extra runs (e.g., overthrows or leg-byes) do not inflate individual boundary statistics.
+
 ## Tech Stack
 - Python
 - Pandas
