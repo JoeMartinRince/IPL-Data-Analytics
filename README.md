@@ -158,6 +158,22 @@ team_wins = matches['winner'].value_counts()
 - **Output Structure:** Yields a Pandas `Series` where `team_wins.index` holds franchise identifiers and `team_wins.values` represents total historical wins.
 - **Automatic Ranking:** Because `.value_counts()` sorts in descending order by default, the most victorious teams appear first, allowing direct plotting without additional sorting steps.
 
+### Calculation Methodology: Top Run Scorers & Boundary Hitters
+
+Player scoring metrics are derived via two targeted multi-stage Pandas operations:
+
+```python
+# 1. Total Career Runs
+top_batsmen = deliveries.groupby('batter')['batsman_runs'].sum().sort_values(ascending=False).head(10)
+
+# 2. Total Career Sixes
+sixes = deliveries[deliveries['batsman_runs'] == 6]
+top_six_hitters = sixes.groupby('batter').size().sort_values(ascending=False).head(10)
+```
+
+- **Batter Aggregation:** The dataset partitions records by unique batter tokens, summing solely `batsman_runs` so extras (wides, no-balls, leg-byes) are excluded from the player's personal score.
+- **Boundary Subsetting:** `sixes` isolates all rows where the batsman hit a 6, then `.size()` groups by `batter` to count total boundary clearances before sorting and truncating to the top 10.
+
 ## Tech Stack
 - Python
 - Pandas
