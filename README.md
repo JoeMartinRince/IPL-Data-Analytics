@@ -209,6 +209,15 @@ The dashboard visualizes complex statistical aggregates into accessible, present
 - **Responsive Dimensions:** Proportions (`figsize=(10,5)` and `figsize=(12,6)`) are calibrated to ensure clarity on diverse display screens.
 - **Layout Optimization:** Calls to `plt.tight_layout()` ensure axis titles and rotated tick marks are never clipped by viewport margins.
 
+### Matplotlib Implementation & Configuration
+
+Matplotlib (`matplotlib.pyplot`) serves as the foundational rendering backend across all figures:
+
+- **Figure & Subplot Instantiation:** Using `plt.subplots(figsize=(10,5))` and `plt.subplots(figsize=(12,6))` isolates canvas contexts, preventing chart overlapping during Streamlit reruns.
+- **Axis Labeling:** Explicitly configures readable labels (`plt.ylabel("Wins")`, `plt.ylabel("Runs")`, `plt.ylabel("Matches")`, `plt.ylabel("Number of Sixes")`, `plt.xlabel("Teams")`).
+- **Rotated Tick Labels:** `plt.xticks(rotation=45, ha='right')` aligns long franchise and player names at a 45-degree slant to maintain clean spacing.
+- **Padding Control:** `plt.tight_layout()` automatically adjusts spacing around subplot perimeters.
+
 ## Tech Stack
 - Python
 - Pandas
