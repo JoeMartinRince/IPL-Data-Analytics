@@ -110,6 +110,19 @@ The analytical pipeline is powered by two complementary tabular datasets stored 
 - **Delivery Universe:** Exceeds 193,000 recorded delivery events, capturing runs scored, extras, and individual player actions.
 - **Franchise Evolution:** Encompasses both foundation franchises (e.g., MI, CSK, KKR, RCB, RR, KXIP, DC) and historical transient franchises (e.g., Deccan Chargers, Pune Warriors, Gujarat Lions, Rising Pune Supergiant, Kochi Tuskers Kerala, and Sunrisers Hyderabad).
 
+### Schema & Primary Feature Columns
+
+The dashboard specifically references the following critical attributes across the two data files:
+
+| Dataset | Column Name | Data Type | Analytical Usage in Project |
+| :--- | :--- | :--- | :--- |
+| `matches.csv` | `season` | `int64` / `object` | Chronological aggregation for season-wise match counts. |
+| `matches.csv` | `winner` | `object` | Computing franchise win counts and driving team filter options. |
+| `matches.csv` | `venue` | `object` | Displayed in match detail tables for selected teams. |
+| `matches.csv` | `toss_winner` | `object` | Evaluated against `winner` for toss victory correlation. |
+| `deliveries.csv` | `batter` | `object` | Grouping key for career run sums and six-hitting leaderboards. |
+| `deliveries.csv` | `batsman_runs` | `int64` | Aggregated for total runs and filtered (`== 6`) for six-hitters. |
+
 ## Tech Stack
 - Python
 - Pandas
