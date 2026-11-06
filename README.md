@@ -439,3 +439,11 @@ Planned future enhancements to expand capabilities:
   - [Pandas API Reference](https://pandas.pydata.org/docs/)
   - [Seaborn Visualization Guide](https://seaborn.pydata.org/)
   - [Matplotlib User Guide](https://matplotlib.org/stable/users/index.html)
+
+## Project Summary & License
+
+The **IPL Data Analytics Dashboard** provides an accessible, reproducible, and insightful lens into thirteen seasons of cricket history, demonstrating end-to-end data processing, exploratory analysis, and responsive web deployment with pure Python.
+
+- **Author / Maintainer:** [JoeMartinRince](https://github.com/JoeMartinRince)
+- **Repository:** [IPL-Data-Analytics](https://github.com/JoeMartinRince/IPL-Data-Analytics.git)
+- **License:** Released under the [MIT License](https://opensource.org/licenses/MIT). Open for academic, personal, and commercial study with proper attribution.
