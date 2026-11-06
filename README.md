@@ -123,6 +123,14 @@ The dashboard specifically references the following critical attributes across t
 | `deliveries.csv` | `batter` | `object` | Grouping key for career run sums and six-hitting leaderboards. |
 | `deliveries.csv` | `batsman_runs` | `int64` | Aggregated for total runs and filtered (`== 6`) for six-hitters. |
 
+## Data Preprocessing Pipeline
+
+Raw sports tracking datasets often feature missing values, abandoned matches (no results), and varying string naming formats. The preprocessing architecture in `app.py` ensures reliable runtime execution through the following pipeline:
+
+- **Ingestion & In-Memory Loading:** Datasets are read at runtime via `pd.read_csv("matches.csv")` and `pd.read_csv("deliveries.csv")`.
+- **Targeted Subsetting:** Specific features required for analytical views are isolated dynamically rather than duplicated in memory.
+- **Dataset Partitioning:** Queries on team results and season trends reference `matches`, while player-level performance metrics reference `deliveries`.
+
 ## Tech Stack
 - Python
 - Pandas
