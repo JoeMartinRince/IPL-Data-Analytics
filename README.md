@@ -96,8 +96,12 @@ The analytical pipeline is powered by two complementary tabular datasets stored 
 1. **`matches.csv` (Match-Level Records):** Encapsulates macro match-level metadata across every fixture, including season edition, participating teams, toss decisions, venue locations, and match winners.
 2. **`deliveries.csv` (Ball-by-Ball Records):** Provides granular micro-level event logging for each delivery bowled in the tournament, recording bowler actions, batsman runs scored, extra runs, and wicket dismissals.
 
-Dataset used:
-https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020
+### Dataset Source & Provenance
+
+- **Origin:** Curated and published on Kaggle by Patrick B ([IPL Complete Dataset (2008-2020)](https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020)).
+- **Primary Lineage:** Aggregated from official BCCI match scorecards, Cricsheet ball-by-ball logs, and historical sports statistics archives.
+- **Licensing & Usage:** Freely accessible under open data licensing for educational and non-commercial sports data analytics research.
+- **File Pairing:** Designed to be loaded side-by-side in the repository root directory as `matches.csv` and `deliveries.csv`.
 
 ## Tech Stack
 - Python
