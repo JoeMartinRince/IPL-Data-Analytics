@@ -174,6 +174,20 @@ top_six_hitters = sixes.groupby('batter').size().sort_values(ascending=False).he
 - **Batter Aggregation:** The dataset partitions records by unique batter tokens, summing solely `batsman_runs` so extras (wides, no-balls, leg-byes) are excluded from the player's personal score.
 - **Boundary Subsetting:** `sixes` isolates all rows where the batsman hit a 6, then `.size()` groups by `batter` to count total boundary clearances before sorting and truncating to the top 10.
 
+### Calculation Methodology: Toss Decision Correlation
+
+The dashboard evaluates whether winning the coin toss translates into winning the cricket match:
+
+```python
+toss_match_win = matches[matches['toss_winner'] == matches['winner']]
+percentage = (len(toss_match_win) / len(matches)) * 100
+st.success(f"Teams winning the toss also won the match {percentage:.2f}% of the time.")
+```
+
+- **Vectorized Equality Evaluation:** `matches['toss_winner'] == matches['winner']` performs an element-wise row comparison between toss winners and match winners.
+- **Cardinality Ratio:** `len(toss_match_win)` captures the count of matches where the condition holds true, divided by `len(matches)` representing all recorded tournament encounters.
+- **Metric Presentation:** Scaled to a percentage and formatted to two decimal precision, outputting an empirical rate (~52%) illustrating that the toss grants only a marginal advantage in IPL T20 history.
+
 ## Tech Stack
 - Python
 - Pandas
