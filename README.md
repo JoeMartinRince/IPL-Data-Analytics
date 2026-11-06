@@ -237,11 +237,17 @@ The dashboard is built on Streamlit's declarative, reactive application framewor
 - **Zero Frontend Overhead:** Does not require HTML templates, CSS builds, or JavaScript client-server synchronization, enabling pure Python full-stack sports analytics.
 
 ## Tech Stack
-- Python
-- Pandas
-- Streamlit
-- Matplotlib
-- Seaborn
+
+The application leverages Python's scientific and analytical ecosystem:
+
+| Technology | Category | Purpose in Project |
+| :--- | :--- | :--- |
+| **Python** | Core Language | Runtime language providing the execution environment for data structures and scripts. |
+| **Pandas** | Data Wrangling | Ingestion of CSV files, DataFrame filtering, grouping (`groupby`), and aggregation (`sum`, `size`, `value_counts`). |
+| **Streamlit** | Web Application Framework | Interactive UI rendering, sidebar selectbox widget controls, success callout banners, and reactive dashboard state management. |
+| **Matplotlib** | Visualization Backend | Figure and canvas lifecycle management (`plt.subplots`), custom axis titles, tick rotation, and margin adjustments (`tight_layout`). |
+| **Seaborn** | Statistical Data Visualization | High-level aesthetic charts including categorical bar plots (`sns.barplot`) and chronological line plots (`sns.lineplot`). |
+| **NumPy** | Numerical Computing | Vectorized array operations and numerical support underlying Pandas Series calculations. |
 
 ## Run Locally
 
