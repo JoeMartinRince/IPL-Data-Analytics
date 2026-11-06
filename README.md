@@ -408,6 +408,17 @@ Understanding the boundaries of the underlying data and analytical scope:
 - **Bowling Dimensions:** The current version emphasizes team victories, batsman run totals, and boundary hitting; bowling metrics (wickets taken, bowling economy, bowling strike rates) are reserved for subsequent versions.
 - **Batch Dataset Processing:** Operations execute over local static CSV snapshots rather than real-time telemetry or live web APIs.
 
+## Future Roadmap & Enhancements
+
+Planned future enhancements to expand capabilities:
+
+- [ ] **Bowling Analytics Module:** Introduce Purple Cap rankings, top wicket-takers, economy rates during death overs, and bowling strike rate metrics.
+- [ ] **Interactive Plotly Charts:** Migrate static Matplotlib/Seaborn plots to interactive Plotly visuals with hover tooltips, box zooming, and responsive SVG downloads.
+- [ ] **Head-to-Head Franchise Comparisons:** Add a side-by-side rival comparison tool showing historical win ratios and venue splits between any two chosen teams.
+- [ ] **Multi-Season Range Filter:** Integrate a dual-handle slider to filter statistics by custom season ranges (e.g., 2014–2019).
+- [ ] **Expanded Historical Ingestion:** Update datasets to incorporate post-2020 editions (including 10-team seasons and playoff formats).
+- [ ] **Dockerized Deployment:** Provide a standardized `Dockerfile` and `docker-compose.yml` for effortless containerized execution.
+
 ## Troubleshooting & FAQs
 
 | Issue / Error | Potential Cause | Verified Resolution |
