@@ -39,11 +39,15 @@ The project is structured around five core engineering and analytical objectives
 - **Streamlined Architecture:** Pure Python stack with zero heavy database overhead, executing directly in the local browser.
 
 ## Features
-- Top winning teams
-- Top run scorers
-- Toss impact analysis
-- Season-wise trends
-- Interactive team filtering
+
+The dashboard encompasses six core analytical features designed to provide deep visual and numerical perspectives on IPL history:
+
+- **Interactive Team-Specific Match Inspector:** Allows users to filter matches won by any franchise from the sidebar dropdown, presenting historical records including season, winner, and venue.
+- **Franchise Victory Analytics:** Generates frequency-sorted bar plots showing cumulative victories for all participating IPL teams.
+- **All-Time Top Run Scorers:** Computes cumulative runs across all tournament deliveries to rank the top 10 batting leaders in IPL history.
+- **Toss Impact Analysis:** Evaluates the tactical significance of winning the coin toss by computing the exact win-rate percentage of toss-winning teams.
+- **Season Match Progression Trends:** Charts chronological changes in the number of matches conducted in each tournament edition from 2008 to 2020.
+- **Power-Hitting & Boundary Analysis:** Aggregates delivery data where `batsman_runs == 6` to identify and rank the top 10 six-hitting batsmen.
 
 ## Tech Stack
 - Python
