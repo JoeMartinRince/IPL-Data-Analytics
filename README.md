@@ -146,6 +146,18 @@ The dashboard leverages core Pandas primitives to perform complex transformation
 3. **Split-Apply-Combine Aggregation:** `deliveries.groupby('batter')['batsman_runs'].sum()` groups ball records by batsman name, aggregates numeric run tallies, and sorts outputs via `.sort_values(ascending=False)`.
 4. **Index Sorting for Time Series:** `.sort_index()` maintains sequential order when counting occurrences across chronological tournament years.
 
+### Calculation Methodology: Winning Teams
+
+The calculation of winning teams in `app.py` is implemented concisely and efficiently:
+
+```python
+team_wins = matches['winner'].value_counts()
+```
+
+- **Mechanism:** Pandas constructs an internal hash table over the `winner` column, tabulating occurrences while skipping `NaN` entries.
+- **Output Structure:** Yields a Pandas `Series` where `team_wins.index` holds franchise identifiers and `team_wins.values` represents total historical wins.
+- **Automatic Ranking:** Because `.value_counts()` sorts in descending order by default, the most victorious teams appear first, allowing direct plotting without additional sorting steps.
+
 ## Tech Stack
 - Python
 - Pandas
