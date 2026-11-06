@@ -81,6 +81,14 @@ The annual volume of IPL fixtures reflects tournament expansion, franchise inclu
 - **Visual Encoding:** Plotted using a connected Seaborn line plot (`sns.lineplot`) with explicit point markers (`marker='o'`).
 - **Observations:** Clearly visualizes peak seasons (e.g., 2011–2013 with 70+ fixtures during franchise expansion) versus standard 8-team 60-match formats.
 
+### Interactive Team Filtering & Match Drilldown
+
+The dashboard features an interactive sidebar designed for focused franchise inquiry:
+- **Sidebar Selection:** Built using `st.sidebar.selectbox` populated with unique winning team names: `matches['winner'].dropna().unique()`.
+- **Dynamic Data Filtering:** Filters match records where `matches['winner'] == selected_team`.
+- **Match Table Drilldown:** Renders the first 10 match victories with key attributes (`season`, `winner`, `venue`) directly in the main interface.
+- **Boundary Power-Hitters Complement:** Accompanied by a dedicated analysis of the top 10 six-hitting batsmen (`deliveries[deliveries['batsman_runs'] == 6]`), highlighting power hitters like Chris Gayle, AB de Villiers, and Rohit Sharma.
+
 ## Tech Stack
 - Python
 - Pandas
