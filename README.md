@@ -188,6 +188,18 @@ st.success(f"Teams winning the toss also won the match {percentage:.2f}% of the 
 - **Cardinality Ratio:** `len(toss_match_win)` captures the count of matches where the condition holds true, divided by `len(matches)` representing all recorded tournament encounters.
 - **Metric Presentation:** Scaled to a percentage and formatted to two decimal precision, outputting an empirical rate (~52%) illustrating that the toss grants only a marginal advantage in IPL T20 history.
 
+### Calculation Methodology: Season-Wise Match Progression
+
+The dashboard analyzes tournament edition volume across time:
+
+```python
+matches_per_season = matches['season'].value_counts().sort_index()
+```
+
+- **Edition Frequency Count:** `matches['season'].value_counts()` computes total matches played per season.
+- **Index Reordering:** `.sort_index()` sorts entries in chronological sequence by year rather than descending match counts.
+- **Coordinates:** `matches_per_season.index` maps to season years (x-axis) and `matches_per_season.values` maps to match totals (y-axis), feeding directly into the time-series line chart.
+
 ## Tech Stack
 - Python
 - Pandas
