@@ -29,6 +29,15 @@ The project is structured around five core engineering and analytical objectives
 4. **Intuitive Visual Presentation:** Render clear, labeled, and styled charts using Seaborn and Matplotlib integrated directly into Streamlit's reactive web framework.
 5. **Reproducible Local Deployment:** Maintain a streamlined, reproducible environment executable with standard Python virtual environment tooling.
 
+## Key Highlights
+
+- **Dynamic Sidebar Filtering:** Real-time dropdown selection of IPL teams dynamically filters match results with venue and season context.
+- **Franchise Dominance Breakdown:** Bar charts visually ranking cumulative match wins across all franchises throughout IPL history.
+- **Elite Batting Leaderboards:** Granular aggregation revealing the top 10 all-time run scorers and top 10 six hitters.
+- **Empirical Toss Correlation:** Instant statistical banner displaying the win percentage of teams that won the coin toss.
+- **Season Match Progression:** Visual timeline charting the expansion and variations in total match counts per season.
+- **Streamlined Architecture:** Pure Python stack with zero heavy database overhead, executing directly in the local browser.
+
 ## Features
 - Top winning teams
 - Top run scorers
