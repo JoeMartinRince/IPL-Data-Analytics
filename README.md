@@ -49,6 +49,14 @@ The dashboard encompasses six core analytical features designed to provide deep 
 - **Season Match Progression Trends:** Charts chronological changes in the number of matches conducted in each tournament edition from 2008 to 2020.
 - **Power-Hitting & Boundary Analysis:** Aggregates delivery data where `batsman_runs == 6` to identify and rank the top 10 six-hitting batsmen.
 
+### Top Winning Teams Analysis
+
+The dashboard analyzes cumulative match outcomes across all tournament seasons to rank franchises by total victories:
+- **Data Source:** Extracted from the `winner` attribute in `matches.csv`.
+- **Computation:** Employs Pandas frequency counting (`matches['winner'].value_counts()`) to aggregate and sort match victories in descending order.
+- **Visualization:** Rendered as a Seaborn bar chart (`sns.barplot`), clearly illustrating the historical dominance of perennial powerhouses like Mumbai Indians, Chennai Super Kings, and Kolkata Knight Riders.
+- **Readability:** Team names are rotated along the x-axis to prevent label overlap and ensure crisp rendering across varying screen resolutions.
+
 ## Tech Stack
 - Python
 - Pandas
